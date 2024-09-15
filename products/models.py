@@ -19,6 +19,9 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE, 
                                  verbose_name='Категория', 
                                  related_name='products')
+    user = models.ForeignKey('accounts.User', on_delete=models.CASCADE,
+                             verbose_name='Пользователь', related_name='products', 
+                             null=True, blank=True)
     
     def __str__(self):
         return self.title
