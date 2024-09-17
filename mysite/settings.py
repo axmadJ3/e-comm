@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     #local
     'accounts',
     'products',
+    'ordering',
 ]
 
 REST_FRAMEWORK = {
